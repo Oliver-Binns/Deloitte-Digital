@@ -35,13 +35,18 @@ class ProductTableCell: UITableViewCell {
             cart.isEnabled = product.stock != 0
             wishList.isEnabled = product.stock != 0
             if product.stock != 0 {
+                cart.alpha = 1
+                wishList.alpha = 1
                 stockLabel.text = "\(product.stock) in stock"
+            } else {
+                cart.alpha = 0.3
+                wishList.alpha = 0.3
             }
         }
     }
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override func willMove(toWindow newWindow: UIWindow?) {
+        super.willMove(toWindow: newWindow)
 
         cart.setIcon(prefixText: "", icon: .fontAwesomeSolid(.shoppingCart), iconColor: cart.tintColor,
                      postfixText: " Add to Cart", postfixTextColor: cart.tintColor, forState: .normal)
