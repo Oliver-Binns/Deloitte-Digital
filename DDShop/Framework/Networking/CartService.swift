@@ -28,11 +28,12 @@ final class CartService: CartServiceProtocol {
 
     }
 }
-protocol CartServiceProtocol: class {
-    func addToCart(productId: Int) -> Promise<Int>
-    func removeFromCart(cartId: Int) -> Promise<Bool>
-}
 private struct AddedResponse: Decodable {
     let cartId: Int
     let productId: Int
+}
+
+protocol CartServiceProtocol: class {
+    func addToCart(productId: Int) -> Promise<Int>
+    func removeFromCart(cartId: Int) -> Promise<Bool>
 }

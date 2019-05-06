@@ -9,7 +9,7 @@
 import XCTest
 @testable import DDShop
 
-class ArrayExtensionTest: XCTestCase {
+class ArrayExtensionTests: XCTestCase {
 
     func testRemoveFirst() {
         var numbers = [ 1, 2, 3, 3, 2, 1 ]
