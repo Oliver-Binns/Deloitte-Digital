@@ -204,6 +204,8 @@
 			children = (
 				A7FD6303228060CD00E1B460 /* TabBar */,
 				A7FD6300227F826D00E1B460 /* ProductListView */,
+				A7FD63252280F55400E1B460 /* CartListView */,
+				A7FD63262280F56400E1B460 /* WishlistView */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -273,6 +275,20 @@
 				A7FD631A2280DCCC00E1B460 /* Array+DDShop.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A7FD63252280F55400E1B460 /* CartListView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CartListView;
+			sourceTree = "<group>";
+		};
+		A7FD63262280F56400E1B460 /* WishlistView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WishlistView;
 			sourceTree = "<group>";
 		};
 		FD13B149AC5E83CDD0CB2C6C /* Frameworks */ = {
