@@ -20,6 +20,7 @@
 		A7C8FAD9227F7CB300DF9CA8 /* DDShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C8FAD8227F7CB300DF9CA8 /* DDShopUITests.swift */; };
 		A7C8FAE9227F7D8500DF9CA8 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C8FAE8227F7D8500DF9CA8 /* ProductModel.swift */; };
 		A7FD6302227F82B100E1B460 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD6301227F82B100E1B460 /* ProductListView.swift */; };
+		A7FD6305228060E200E1B460 /* DDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD6304228060E200E1B460 /* DDTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		A7C8FADA227F7CB300DF9CA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7C8FAE8227F7D8500DF9CA8 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		A7FD6301227F82B100E1B460 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		A7FD6304228060E200E1B460 /* DDTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDTabBarController.swift; sourceTree = "<group>"; };
 		B8248CE5597E8E608E8575B4 /* Pods-DDShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-DDShopUITests/Pods-DDShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA06CA3B887D52DCF8CB9FB2 /* Pods-DDShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDShopTests.release.xcconfig"; path = "Target Support Files/Pods-DDShopTests/Pods-DDShopTests.release.xcconfig"; sourceTree = "<group>"; };
 		F0C115C5CA630AD581411B89 /* Pods-DDShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDShopUITests.release.xcconfig"; path = "Target Support Files/Pods-DDShopUITests/Pods-DDShopUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		A7FD62FE227F822E00E1B460 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A7FD6303228060CD00E1B460 /* TabBar */,
 				A7FD6300227F826D00E1B460 /* ProductListView */,
 				A7FD62FF227F824E00E1B460 /* DetailedProductView */,
 			);
@@ -194,6 +197,14 @@
 				A7FD6301227F82B100E1B460 /* ProductListView.swift */,
 			);
 			path = ProductListView;
+			sourceTree = "<group>";
+		};
+		A7FD6303228060CD00E1B460 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A7FD6304228060E200E1B460 /* DDTabBarController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		FD13B149AC5E83CDD0CB2C6C /* Frameworks */ = {
@@ -218,6 +229,7 @@
 				A7C8FAB0227F7CB300DF9CA8 /* Frameworks */,
 				A7C8FAB1227F7CB300DF9CA8 /* Resources */,
 				86AA7CC72F2D90743AF1112E /* [CP] Embed Pods Frameworks */,
+				A7FD6306228062B300E1B460 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -369,17 +381,36 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DDShop/Pods-DDShop-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftIcons/SwiftIcons.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftIcons.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDShop/Pods-DDShop-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A7FD6306228062B300E1B460 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run Swiftlint to check syntax\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		B410ABA06CD93F83A5B4B8CC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -434,6 +465,7 @@
 			files = (
 				A7C8FABB227F7CB300DF9CA8 /* SecondViewController.swift in Sources */,
 				A7C8FAB7227F7CB300DF9CA8 /* AppDelegate.swift in Sources */,
+				A7FD6305228060E200E1B460 /* DDTabBarController.swift in Sources */,
 				A7C8FAB9227F7CB300DF9CA8 /* ProductListViewController.swift in Sources */,
 				A7C8FAE9227F7D8500DF9CA8 /* ProductModel.swift in Sources */,
 				A7FD6302227F82B100E1B460 /* ProductListView.swift in Sources */,

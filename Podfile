@@ -6,6 +6,7 @@ target 'DDShop' do
   use_frameworks!
   pod 'Alamofire'
   pod 'SwiftLint'
+  pod 'SwiftIcons'
 
   # Pods for DDShop
 

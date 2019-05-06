@@ -18,7 +18,7 @@ class ProductListViewController: UITableViewController {
             guard let data = response.data else { return }
 
             let products = try? JSONDecoder().decode([Product].self, from: data)
-            (self.tableView as! ProductListView).products = products ?? []
+            (self.tableView as? ProductListView)?.products = products ?? []
         }
     }
 }
