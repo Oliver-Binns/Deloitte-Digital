@@ -26,10 +26,10 @@ final class FetchProductListService: FetchProductListServiceProtocol {
     }
 
     private func getProducts() -> Promise<[Product]> {
-        return Alamofire.request("https://private-anon-a665a2107b-ddshop.apiary-mock.com/products")
+        return Alamofire.request(Globals.baseUrl + "products")
             .responseDecodable([Product].self)
     }
 }
-protocol FetchProductListServiceProtocol {
+protocol FetchProductListServiceProtocol: class {
     func getProductList() -> Promise<[[Product]]>
 }

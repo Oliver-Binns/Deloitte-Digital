@@ -15,15 +15,15 @@ enum LoadProductsAction: Action {
 }
 
 struct AddToCartAction: Action {
-    let product: Product
+    let cartItem: CartItem
 }
 struct RemoveFromCartAction: Action {
-    let product: Product
+    let cartId: Int
 }
 
 struct AddToWishlistAction: Action {
-    let product: Product
+    let productId: Int
 }
 struct RemoveFromWishlistAction: Action {
-    let product: Product
+    let productId: Int
 }

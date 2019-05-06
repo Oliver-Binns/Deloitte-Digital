@@ -28,3 +28,22 @@ func fetchProducts(with service: FetchProductListServiceProtocol = FetchProductL
         }
     }
 }
+func addToCart(productId: Int, with service: CartServiceProtocol = CartService()) -> Thunk<ProductState> {
+    return Thunk<ProductState> { dispatch, _ in
+        _ = service.addToCart(productId: productId).done { cartId in
+            dispatch(AddToCartAction(cartItem: CartItem(cartId: cartId, productId: productId)))
+        }
+    }
+}
+func removeFromCart(cartId: Int, with service: CartServiceProtocol = CartService()) -> Thunk<ProductState> {
+    return Thunk<ProductState> { dispatch, getState in
+        guard let cart = getState()?.cart,
+            cart.contains(where: { $0.cartId == cartId })
+            else { return }
+        _ = service.removeFromCart(cartId: cartId).done { success in
+            if success {
+                dispatch(RemoveFromCartAction(cartId: cartId))
+            }
+        }
+    }
+}

@@ -12,8 +12,8 @@ struct ProductState: StateType {
     var allProducts: [[Product]] = []
     var fetchProductsState: AsyncStatus = .loaded
 
-    var wishlist: [Product] = []
-    var cart: [Product] = []
+    var wishlist: [Int] = []
+    var cart: [CartItem] = []
 
     enum AsyncStatus {
         case loading

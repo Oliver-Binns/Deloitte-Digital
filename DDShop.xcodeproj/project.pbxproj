@@ -29,6 +29,10 @@
 		A7FD63162280C88700E1B460 /* ProductEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD63152280C88700E1B460 /* ProductEffects.swift */; };
 		A7FD63182280CA3400E1B460 /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD63172280CA3400E1B460 /* MainStore.swift */; };
 		A7FD631B2280DCCC00E1B460 /* Array+DDShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD631A2280DCCC00E1B460 /* Array+DDShop.swift */; };
+		A7FD631D2280E72200E1B460 /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD631C2280E72200E1B460 /* CartService.swift */; };
+		A7FD631F2280E83500E1B460 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD631E2280E83500E1B460 /* Globals.swift */; };
+		A7FD63212280ECF700E1B460 /* MockResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = A7FD63202280ECF700E1B460 /* MockResponse.json */; };
+		A7FD63242280EE8B00E1B460 /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD63232280EE8B00E1B460 /* CartModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		A7FD63152280C88700E1B460 /* ProductEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEffects.swift; sourceTree = "<group>"; };
 		A7FD63172280CA3400E1B460 /* MainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStore.swift; sourceTree = "<group>"; };
 		A7FD631A2280DCCC00E1B460 /* Array+DDShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+DDShop.swift"; sourceTree = "<group>"; };
+		A7FD631C2280E72200E1B460 /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
+		A7FD631E2280E83500E1B460 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		A7FD63202280ECF700E1B460 /* MockResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockResponse.json; sourceTree = "<group>"; };
+		A7FD63232280EE8B00E1B460 /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
 		B8248CE5597E8E608E8575B4 /* Pods-DDShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-DDShopUITests/Pods-DDShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA06CA3B887D52DCF8CB9FB2 /* Pods-DDShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDShopTests.release.xcconfig"; path = "Target Support Files/Pods-DDShopTests/Pods-DDShopTests.release.xcconfig"; sourceTree = "<group>"; };
 		F0C115C5CA630AD581411B89 /* Pods-DDShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDShopUITests.release.xcconfig"; path = "Target Support Files/Pods-DDShopUITests/Pods-DDShopUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +185,7 @@
 			children = (
 				A7C8FAD8227F7CB300DF9CA8 /* DDShopUITests.swift */,
 				A7C8FADA227F7CB300DF9CA8 /* Info.plist */,
+				A7FD63202280ECF700E1B460 /* MockResponse.json */,
 			);
 			path = DDShopUITests;
 			sourceTree = "<group>";
@@ -185,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				A7C8FAE8227F7D8500DF9CA8 /* ProductModel.swift */,
+				A7FD63232280EE8B00E1B460 /* CartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,6 +229,7 @@
 		A7FD63072280951700E1B460 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				A7FD631E2280E83500E1B460 /* Globals.swift */,
 				A7FD63192280DCBE00E1B460 /* Extensions */,
 				A7FD630C2280982200E1B460 /* Redux */,
 				A7FD63082280952100E1B460 /* Services */,
@@ -231,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				A7FD630A2280961E00E1B460 /* FetchProductListService.swift */,
+				A7FD631C2280E72200E1B460 /* CartService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -399,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7FD63212280ECF700E1B460 /* MockResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,14 +541,17 @@
 				A7FD63162280C88700E1B460 /* ProductEffects.swift in Sources */,
 				A7FD631B2280DCCC00E1B460 /* Array+DDShop.swift in Sources */,
 				A7C8FABB227F7CB300DF9CA8 /* SecondViewController.swift in Sources */,
+				A7FD631D2280E72200E1B460 /* CartService.swift in Sources */,
 				A7FD63122280C85700E1B460 /* ProductState.swift in Sources */,
 				A7C8FAB7227F7CB300DF9CA8 /* AppDelegate.swift in Sources */,
 				A7FD630E2280A71000E1B460 /* ProductTableCell.swift in Sources */,
 				A7FD6305228060E200E1B460 /* DDTabBarController.swift in Sources */,
 				A7C8FAB9227F7CB300DF9CA8 /* ProductListViewController.swift in Sources */,
 				A7FD63102280C7E500E1B460 /* ProductActions.swift in Sources */,
+				A7FD63242280EE8B00E1B460 /* CartModel.swift in Sources */,
 				A7FD63182280CA3400E1B460 /* MainStore.swift in Sources */,
 				A7FD63142280C87A00E1B460 /* ProductReducer.swift in Sources */,
+				A7FD631F2280E83500E1B460 /* Globals.swift in Sources */,
 				A7C8FAE9227F7D8500DF9CA8 /* ProductModel.swift in Sources */,
 				A7FD6302227F82B100E1B460 /* ProductListView.swift in Sources */,
 				A7FD630B2280961E00E1B460 /* FetchProductListService.swift in Sources */,

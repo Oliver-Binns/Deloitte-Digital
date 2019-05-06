@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct Globals {
+    static let baseUrl = "https://private-anon-a665a2107b-ddshop.apiary-mock.com/"
+}

@@ -35,20 +35,26 @@ extension ProductListViewController: StoreSubscriber {
 }
 extension ProductListViewController: WishlistDelegate {
     func addToWishlist(product: Product) {
-        MainStore.shared.dispatch(AddToWishlistAction(product: product))
+        MainStore.shared.dispatch(
+            AddToWishlistAction(productId: product.productId)
+        )
     }
 
     func removeFromWishlist(product: Product) {
-        MainStore.shared.dispatch(RemoveFromWishlistAction(product: product))
+        MainStore.shared.dispatch(
+            RemoveFromWishlistAction(productId: product.productId)
+        )
     }
 }
 extension ProductListViewController: CartDelegate {
     func addToCart(product: Product) {
-        MainStore.shared.dispatch(AddToCartAction(product: product))
+        MainStore.shared.dispatch(
+            DDShop.addToCart(productId: product.productId)
+        )
     }
 
     func removeFromCart(product: Product) {
-        MainStore.shared.dispatch(RemoveFromCartAction(product: product))
+        //MainStore.shared.dispatch(RemoveFromCartAction(product: product))
     }
 }
 extension ProductListViewController: ReloadProductDelegate {
