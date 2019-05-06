@@ -194,16 +194,8 @@
 			children = (
 				A7FD6303228060CD00E1B460 /* TabBar */,
 				A7FD6300227F826D00E1B460 /* ProductListView */,
-				A7FD62FF227F824E00E1B460 /* DetailedProductView */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		A7FD62FF227F824E00E1B460 /* DetailedProductView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DetailedProductView;
 			sourceTree = "<group>";
 		};
 		A7FD6300227F826D00E1B460 /* ProductListView */ = {
