@@ -16,6 +16,7 @@ func fetchProducts(with service: FetchProductListServiceProtocol = FetchProductL
         if state.fetchProductsState == .loading {
             return
         }
+        dispatch(LoadProductsAction.loading)
 
         _ = service.getProductList().done { products in
             DispatchQueue.main.async {

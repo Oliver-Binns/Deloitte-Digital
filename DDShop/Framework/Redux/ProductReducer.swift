@@ -16,7 +16,7 @@ func productReducer(action: Action, state: ProductState?) -> ProductState {
         switch action {
         case .failed:
             state.fetchProductsState = .failed
-        case .fetch:
+        case .loading:
             state.fetchProductsState = .loading
         case .set(let products):
             state.allProducts = products

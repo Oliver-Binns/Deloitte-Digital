@@ -28,6 +28,7 @@ extension ProductListViewController: StoreSubscriber {
     typealias StoreSubscriberStateType = ProductState
 
     func newState(state: ProductState) {
+        guard state.fetchProductsState == .loaded else { return }
         let productListView = self.tableView as? ProductListView
         productListView?.products = state.allProducts
     }
@@ -48,5 +49,10 @@ extension ProductListViewController: CartDelegate {
 
     func removeFromCart(product: Product) {
         MainStore.shared.dispatch(RemoveFromCartAction(product: product))
+    }
+}
+extension ProductListViewController: ReloadProductDelegate {
+    func reloadProducts() {
+        MainStore.shared.dispatch(fetchProducts())
     }
 }

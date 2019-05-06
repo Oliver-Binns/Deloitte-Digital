@@ -9,14 +9,27 @@
 import UIKit
 
 class ProductListView: UITableView {
-    typealias ProductListViewDelegate = CartDelegate & WishlistDelegate
+    typealias ProductListViewDelegate = CartDelegate & WishlistDelegate & ReloadProductDelegate
     weak var productDelegate: ProductListViewDelegate?
 
     var products: [[Product]] = [] {
         didSet {
             dataSource = self
             self.reloadData()
+            refreshControl?.endRefreshing()
         }
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        refreshControl?.addTarget(self,
+                                  action: #selector(refreshData(_:)),
+                                  for: .valueChanged)
+    }
+
+    @objc private func refreshData(_ sender: Any) {
+        refreshControl?.beginRefreshing()
+        productDelegate?.reloadProducts()
     }
 }
 extension ProductListView: UITableViewDataSource {
@@ -45,4 +58,7 @@ extension ProductListView: UITableViewDataSource {
         cell.selectionStyle = .none
         return cell
     }
+}
+protocol ReloadProductDelegate: class {
+    func reloadProducts()
 }

@@ -9,7 +9,7 @@ import ReSwift
 import Foundation
 
 enum LoadProductsAction: Action {
-    case fetch
+    case loading
     case set([[Product]])
     case failed
 }

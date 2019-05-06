@@ -10,8 +10,6 @@ import Alamofire
 import PromiseKit
 
 final class FetchProductListService: FetchProductListServiceProtocol {
-    static var shared: FetchProductListServiceProtocol = FetchProductListService()
-
     func getProductList() -> Promise<[[Product]]> {
         return getProducts().map { products in
             let dictionary = products.reduce([Product.Category: [Product]]()) { dictionary, nextValue in
@@ -25,7 +23,6 @@ final class FetchProductListService: FetchProductListServiceProtocol {
             }
             return Array(dictionary.values)
         }
-
     }
 
     private func getProducts() -> Promise<[Product]> {
