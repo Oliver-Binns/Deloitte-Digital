@@ -53,11 +53,17 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFo-rd-M78">
                                                             <rect key="frame" x="0.0" y="0.0" width="187" height="13.5"/>
                                                             <state key="normal" title="Action 1"/>
+                                                            <connections>
+                                                                <action selector="addToCart:" destination="d5V-e2-atm" eventType="touchUpInside" id="4hC-gJ-fjU"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJV-fX-26m">
                                                             <rect key="frame" x="187" y="0.0" width="187" height="13.5"/>
                                                             <color key="tintColor" red="0.99942404029999998" green="0.84091395547945202" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" title="Action 2"/>
+                                                            <connections>
+                                                                <action selector="addToWishlist:" destination="d5V-e2-atm" eventType="touchUpInside" id="uzm-SA-GKa"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -126,7 +132,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="900"/>
+            <point key="canvasLocation" x="0.0" y="919"/>
+        </scene>
+        <!--Wishlist-->
+        <scene sceneID="YP2-jC-a9b">
+            <objects>
+                <tableViewController id="KTE-Z2-575" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UsL-WY-VSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="58r-qT-RT9">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="58r-qT-RT9" id="6UQ-Ph-FBy">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KTE-Z2-575" id="5oX-Hw-e1L"/>
+                            <outlet property="delegate" destination="KTE-Z2-575" id="Ngg-en-zOb"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Wishlist" id="W1P-w4-gp9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OgZ-AK-x3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="919"/>
         </scene>
         <!--Cart-->
         <scene sceneID="Pjt-92-PkA">
@@ -169,6 +204,7 @@
                     <connections>
                         <segue destination="nGL-n3-hbB" kind="relationship" relationship="viewControllers" id="eM3-FJ-2dc"/>
                         <segue destination="8VF-UF-KBD" kind="relationship" relationship="viewControllers" id="QUo-Yx-IwW"/>
+                        <segue destination="KTE-Z2-575" kind="relationship" relationship="viewControllers" id="QXH-fO-zoD"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>

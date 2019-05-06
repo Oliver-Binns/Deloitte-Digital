@@ -48,6 +48,16 @@ class ProductTableCell: UITableViewCell {
         wishList.setIcon(prefixText: "", icon: .fontAwesomeRegular(.star), iconColor: wishList.tintColor,
                          postfixText: " Add to Wishlist", postfixTextColor: wishList.tintColor, forState: .normal)
     }
+
+    @IBAction func addToCart(_ sender: Any) {
+        guard let product = product else { return }
+        cartDelegate?.addToCart(product: product)
+    }
+
+    @IBAction func addToWishlist(_ sender: Any) {
+        guard let product = product else { return }
+        wishlistDelegate?.addToWishlist(product: product)
+    }
 }
 protocol WishlistDelegate: class {
     func addToWishlist(product: Product)

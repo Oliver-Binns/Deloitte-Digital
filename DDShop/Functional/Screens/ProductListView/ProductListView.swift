@@ -9,6 +9,8 @@
 import UIKit
 
 class ProductListView: UITableView {
+    typealias ProductListViewDelegate = CartDelegate & WishlistDelegate
+    weak var productDelegate: ProductListViewDelegate?
 
     var products: [[Product]] = [] {
         didSet {
@@ -35,9 +37,10 @@ extension ProductListView: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //swiftlint:disable force_cast
+        //swiftlint:disable:next force_cast
         let cell = tableView.dequeueReusableCell(withIdentifier: CellTypes.clothingCell.rawValue, for: indexPath) as! ProductTableCell
-        //swiftlint:enable force_cast
+        cell.wishlistDelegate = productDelegate
+        cell.cartDelegate = productDelegate
         cell.product = products[indexPath.section][indexPath.row]
         cell.selectionStyle = .none
         return cell

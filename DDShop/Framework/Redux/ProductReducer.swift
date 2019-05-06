@@ -27,7 +27,7 @@ func productReducer(action: Action, state: ProductState?) -> ProductState {
     case let action as RemoveFromCartAction:
         state.cart.removeFirst(occurenceOf: action.product)
     case let action as AddToWishlistAction:
-        state.cart.append(action.product)
+        state.wishlist.append(action.product)
     case let action as RemoveFromWishlistAction:
         state.wishlist.removeFirst(occurenceOf: action.product)
     default:
