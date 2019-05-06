@@ -21,6 +21,7 @@
 		A7C8FAE9227F7D8500DF9CA8 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C8FAE8227F7D8500DF9CA8 /* ProductModel.swift */; };
 		A7FD6302227F82B100E1B460 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD6301227F82B100E1B460 /* ProductListView.swift */; };
 		A7FD6305228060E200E1B460 /* DDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD6304228060E200E1B460 /* DDTabBarController.swift */; };
+		A7FD630B2280961E00E1B460 /* FetchProductListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD630A2280961E00E1B460 /* FetchProductListService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		A7C8FAE8227F7D8500DF9CA8 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		A7FD6301227F82B100E1B460 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		A7FD6304228060E200E1B460 /* DDTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDTabBarController.swift; sourceTree = "<group>"; };
+		A7FD630A2280961E00E1B460 /* FetchProductListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProductListService.swift; sourceTree = "<group>"; };
 		B8248CE5597E8E608E8575B4 /* Pods-DDShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-DDShopUITests/Pods-DDShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA06CA3B887D52DCF8CB9FB2 /* Pods-DDShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDShopTests.release.xcconfig"; path = "Target Support Files/Pods-DDShopTests/Pods-DDShopTests.release.xcconfig"; sourceTree = "<group>"; };
 		F0C115C5CA630AD581411B89 /* Pods-DDShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDShopUITests.release.xcconfig"; path = "Target Support Files/Pods-DDShopUITests/Pods-DDShopUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,8 +137,8 @@
 		A7C8FAB5227F7CB300DF9CA8 /* DDShop */ = {
 			isa = PBXGroup;
 			children = (
-				A7C8FAEA227F7D8F00DF9CA8 /* Model */,
-				A7FD62FE227F822E00E1B460 /* Screens */,
+				A7FD63072280951700E1B460 /* Framework */,
+				A7FD63092280952C00E1B460 /* Functional */,
 				A7C8FAB6227F7CB300DF9CA8 /* AppDelegate.swift */,
 				A7C8FABA227F7CB300DF9CA8 /* SecondViewController.swift */,
 				A7C8FABC227F7CB300DF9CA8 /* Main.storyboard */,
@@ -205,6 +207,39 @@
 				A7FD6304228060E200E1B460 /* DDTabBarController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		A7FD63072280951700E1B460 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				A7FD630C2280982200E1B460 /* Redux */,
+				A7FD63082280952100E1B460 /* Services */,
+				A7C8FAEA227F7D8F00DF9CA8 /* Model */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		A7FD63082280952100E1B460 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A7FD630A2280961E00E1B460 /* FetchProductListService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A7FD63092280952C00E1B460 /* Functional */ = {
+			isa = PBXGroup;
+			children = (
+				A7FD62FE227F822E00E1B460 /* Screens */,
+			);
+			path = Functional;
+			sourceTree = "<group>";
+		};
+		A7FD630C2280982200E1B460 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Redux;
 			sourceTree = "<group>";
 		};
 		FD13B149AC5E83CDD0CB2C6C /* Frameworks */ = {
@@ -381,6 +416,8 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DDShop/Pods-DDShop-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftIcons/SwiftIcons.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -388,6 +425,8 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftIcons.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +508,7 @@
 				A7C8FAB9227F7CB300DF9CA8 /* ProductListViewController.swift in Sources */,
 				A7C8FAE9227F7D8500DF9CA8 /* ProductModel.swift in Sources */,
 				A7FD6302227F82B100E1B460 /* ProductListView.swift in Sources */,
+				A7FD630B2280961E00E1B460 /* FetchProductListService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
