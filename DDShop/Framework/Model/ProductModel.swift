@@ -43,3 +43,8 @@ struct Product: Decodable {
         case rawCategory = "category"
     }
 }
+extension Product: Equatable {
+    static func == (lhs: Product, rhs: Product) -> Bool {
+        return lhs.productId == rhs.productId
+    }
+}

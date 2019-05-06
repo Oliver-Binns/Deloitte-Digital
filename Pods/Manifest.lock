@@ -13,6 +13,8 @@ PODS:
   - PromiseKit/UIKit (6.8.4):
     - PromiseKit/CorePromise
   - ReSwift (4.1.1)
+  - ReSwiftThunk (1.1.0):
+    - ReSwift (~> 4.0)
   - SwiftIcons (2.3.2)
   - SwiftLint (0.32.0)
 
@@ -21,6 +23,7 @@ DEPENDENCIES:
   - PromiseKit
   - PromiseKit/Alamofire
   - ReSwift
+  - ReSwiftThunk
   - SwiftIcons
   - SwiftLint
 
@@ -29,6 +32,7 @@ SPEC REPOS:
     - Alamofire
     - PromiseKit
     - ReSwift
+    - ReSwiftThunk
     - SwiftIcons
     - SwiftLint
 
@@ -36,9 +40,10 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
   ReSwift: d925be0033558f55bd73d92869961230dfe19d52
+  ReSwiftThunk: 727c1549dbd2949472e1c72bec44b1008d7c4f92
   SwiftIcons: e652cfd2676441c462ad57b6e92977faf577e590
   SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
 
-PODFILE CHECKSUM: 13dd4f9b6f0d50718f19bd73ae811ce2f4b159f1
+PODFILE CHECKSUM: 6e714e28fdf9ec7a9dcec64386b71835a1a0e37c
 
 COCOAPODS: 1.6.1

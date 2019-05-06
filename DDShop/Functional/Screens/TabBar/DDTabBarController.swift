@@ -6,6 +6,7 @@
 //  Copyright © 2019 Oliver Binns. All rights reserved.
 //
 import SwiftIcons
+import ReSwift
 import UIKit
 
 class DDTabBarController: UITabBarController {
@@ -18,5 +19,14 @@ class DDTabBarController: UITabBarController {
                                          textColor: tabBar.unselectedItemTintColor ?? .lightGray, backgroundColor: .clear,
                                          selectedTextColor: tabBar.tintColor, selectedBackgroundColor: .clear)
         }
+
+        MainStore.shared.subscribe(self)
+    }
+}
+extension DDTabBarController: StoreSubscriber {
+    typealias StoreSubscriberStateType = ProductState
+
+    func newState(state: ProductState) {
+        tabBar.items?[1].badgeValue = state.cart.isEmpty ? nil : "\(state.cart.count)"
     }
 }

@@ -13,7 +13,6 @@ class ProductListView: UITableView {
     var products: [[Product]] = [] {
         didSet {
             dataSource = self
-            delegate = self
             self.reloadData()
         }
     }
@@ -40,11 +39,7 @@ extension ProductListView: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellTypes.clothingCell.rawValue, for: indexPath) as! ProductTableCell
         //swiftlint:enable force_cast
         cell.product = products[indexPath.section][indexPath.row]
+        cell.selectionStyle = .none
         return cell
-    }
-}
-extension ProductListView: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        return nil
     }
 }

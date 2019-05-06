@@ -33,7 +33,6 @@ final class FetchProductListService: FetchProductListServiceProtocol {
             .responseDecodable([Product].self)
     }
 }
-
 protocol FetchProductListServiceProtocol {
     func getProductList() -> Promise<[[Product]]>
 }

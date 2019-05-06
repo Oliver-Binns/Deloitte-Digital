@@ -8,6 +8,7 @@ target 'DDShop' do
   pod 'PromiseKit'
   pod 'PromiseKit/Alamofire'
   pod 'ReSwift'
+  pod 'ReSwiftThunk'
   pod 'SwiftLint'
   pod 'SwiftIcons'
 
