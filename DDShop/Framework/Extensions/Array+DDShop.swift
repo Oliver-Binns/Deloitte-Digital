@@ -10,7 +10,7 @@ import Foundation
 
 extension Array where Element: Equatable {
     mutating func removeFirst(occurenceOf element: Element) {
-        guard let firstIndex = lastIndex(where: { $0 == element }) else {
+        guard let firstIndex = firstIndex(where: { $0 == element }) else {
             return
         }
         self.remove(at: firstIndex)
