@@ -10,7 +10,7 @@ import UIKit
 
 class ProductListView: UITableView {
 
-    var products: [Product] = [] {
+    var products: [[Product]] = [] {
         didSet {
             dataSource = self
             self.reloadData()
@@ -23,16 +23,20 @@ extension ProductListView: UITableViewDataSource {
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return products.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products.count
+        return products[section].count
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return products[section].first!.category.rawValue
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellTypes.clothingCell.rawValue, for: indexPath)
-        cell.textLabel?.text = products[indexPath.row].name
+        cell.textLabel?.text = products[indexPath.section][indexPath.row].name
         return cell
     }
 }

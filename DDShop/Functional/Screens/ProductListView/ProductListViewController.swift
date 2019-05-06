@@ -17,7 +17,7 @@ class ProductListViewController: UITableViewController {
         let productListView = self.tableView as! ProductListView
         //swiftlint:enable force_cast
         // Do any additional setup after loading the view.gvv
-        _ = FetchProductListService.shared.getProducts().done { products in
+        _ = FetchProductListService.shared.getProductList().done { products in
             productListView.products = products
         }
     }
