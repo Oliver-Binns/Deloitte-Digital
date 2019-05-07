@@ -21,7 +21,7 @@ final class FetchProductListService: FetchProductListServiceProtocol {
                 }
                 return updatedDictionary
             }
-            return Array(dictionary.values)
+            return dictionary.toArray()
         }
     }
 
@@ -30,7 +30,15 @@ final class FetchProductListService: FetchProductListServiceProtocol {
             .responseDecodable([Product].self)
     }
 }
-
 protocol FetchProductListServiceProtocol: class {
     func getProductList() -> Promise<[[Product]]>
+}
+private extension Dictionary where Key == Product.Category {
+    func toArray() -> [Value] {
+        var array = [Value]()
+        for key in self.keys.sorted(by: { $0.rawValue < $1.rawValue }) {
+            array.append(self[key]!)
+        }
+        return array
+    }
 }

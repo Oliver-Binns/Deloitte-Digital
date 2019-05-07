@@ -6,7 +6,6 @@
 //  Copyright © 2019 Oliver Binns. All rights reserved.
 //
 import Nimble
-import ReSwift
 import XCTest
 
 @testable import DDShop
@@ -21,7 +20,7 @@ class ProductStateTests: XCTestCase {
     }
 
     func testProductsFetched() {
-        expect(MainStore.shared.state.allProducts.count).to(equal(6))
+        expect(MainStore.shared.state.allProducts.count).to(equal(1))
     }
 
     func testCart() {
