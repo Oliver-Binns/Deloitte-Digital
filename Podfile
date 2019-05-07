@@ -16,6 +16,7 @@ target 'DDShop' do
 
   target 'DDShopTests' do
     inherit! :search_paths
+    pod 'Nimble'
     # Pods for testing
   end
 

@@ -31,7 +31,6 @@
 		A7FD631B2280DCCC00E1B460 /* Array+DDShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD631A2280DCCC00E1B460 /* Array+DDShop.swift */; };
 		A7FD631D2280E72200E1B460 /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD631C2280E72200E1B460 /* CartService.swift */; };
 		A7FD631F2280E83500E1B460 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD631E2280E83500E1B460 /* Globals.swift */; };
-		A7FD63212280ECF700E1B460 /* MockResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = A7FD63202280ECF700E1B460 /* MockResponse.json */; };
 		A7FD63242280EE8B00E1B460 /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD63232280EE8B00E1B460 /* CartModel.swift */; };
 		A7FD632B2280FAB000E1B460 /* ProductStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD632A2280FAB000E1B460 /* ProductStateTests.swift */; };
 		A7FD632E2280FBC900E1B460 /* MockProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD632D2280FBC900E1B460 /* MockProductService.swift */; };
@@ -183,6 +182,7 @@
 			children = (
 				A7C8FACD227F7CB300DF9CA8 /* ArrayExtensionTests.swift */,
 				A7FD632C2280FBA900E1B460 /* Product State */,
+				A7FD63202280ECF700E1B460 /* MockResponse.json */,
 				A7C8FACF227F7CB300DF9CA8 /* Info.plist */,
 			);
 			path = DDShopTests;
@@ -194,7 +194,6 @@
 				A7FD63272280F96300E1B460 /* Shop Tab */,
 				A7FD63282280F97A00E1B460 /* Cart Tab */,
 				A7FD63292280F98800E1B460 /* Wishlist Tab */,
-				A7FD63202280ECF700E1B460 /* MockResponse.json */,
 				A7C8FADA227F7CB300DF9CA8 /* Info.plist */,
 			);
 			path = DDShopUITests;
@@ -374,6 +373,7 @@
 				A7C8FAC5227F7CB300DF9CA8 /* Sources */,
 				A7C8FAC6227F7CB300DF9CA8 /* Frameworks */,
 				A7C8FAC7227F7CB300DF9CA8 /* Resources */,
+				9E66A8112DBA511BD4D96319 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -470,7 +470,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7FD63212280ECF700E1B460 /* MockResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +526,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDShop/Pods-DDShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E66A8112DBA511BD4D96319 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DDShopTests/Pods-DDShopTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDShopTests/Pods-DDShopTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A7FD6306228062B300E1B460 /* ShellScript */ = {

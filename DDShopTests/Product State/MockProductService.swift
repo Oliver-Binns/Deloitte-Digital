@@ -10,12 +10,18 @@ import PromiseKit
 
 @testable import DDShop
 
-class MockProductService: FetchProductListServiceProtocol {
+final class MockProductService: FetchProductListServiceProtocol {
     func getProductList() -> Promise<[[Product]]> {
         let promise = Promise()
         return promise.map {
-            
-            return [[Product]]()
+            let classType = type(of: self)
+            guard
+                let path = Bundle(for: classType.self).path(forResource: "MockResponse", ofType: "json"),
+                let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
+                let objects = try? JSONDecoder().decode([Product].self, from: data) else {
+                return []
+            }
+            return [objects]
         }
     }
 }

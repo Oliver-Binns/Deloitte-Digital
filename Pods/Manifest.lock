@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.2)
+  - Nimble (8.0.1)
   - PromiseKit (6.8.4):
     - PromiseKit/CorePromise (= 6.8.4)
     - PromiseKit/Foundation (= 6.8.4)
@@ -20,6 +21,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Nimble
   - PromiseKit
   - PromiseKit/Alamofire
   - ReSwift
@@ -30,6 +32,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Nimble
     - PromiseKit
     - ReSwift
     - ReSwiftThunk
@@ -38,12 +41,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
   ReSwift: d925be0033558f55bd73d92869961230dfe19d52
   ReSwiftThunk: 727c1549dbd2949472e1c72bec44b1008d7c4f92
   SwiftIcons: e652cfd2676441c462ad57b6e92977faf577e590
   SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
 
-PODFILE CHECKSUM: 6e714e28fdf9ec7a9dcec64386b71835a1a0e37c
+PODFILE CHECKSUM: 06709360ab2381ae065494d0b30868de8e356550
 
 COCOAPODS: 1.6.1
