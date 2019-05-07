@@ -14,6 +14,7 @@ class MockProductService: FetchProductListServiceProtocol {
     func getProductList() -> Promise<[[Product]]> {
         let promise = Promise()
         return promise.map {
+            
             return [[Product]]()
         }
     }

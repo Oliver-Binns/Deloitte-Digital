@@ -27,6 +27,10 @@ func productReducer(action: Action, state: ProductState?) -> ProductState {
     case let action as RemoveFromCartAction:
         state.cart.removeAll(where: { $0.cartId == action.cartId })
     case let action as AddToWishlistAction:
+        // Only append if product Exists!
+        guard state.contains(productId: action.productId) else {
+            break
+        }
         state.wishlist.append(action.productId)
     case let action as RemoveFromWishlistAction:
         state.wishlist.removeFirst(occurenceOf: action.productId)

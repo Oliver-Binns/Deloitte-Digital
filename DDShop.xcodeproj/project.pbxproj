@@ -36,6 +36,7 @@
 		A7FD632B2280FAB000E1B460 /* ProductStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD632A2280FAB000E1B460 /* ProductStateTests.swift */; };
 		A7FD632E2280FBC900E1B460 /* MockProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD632D2280FBC900E1B460 /* MockProductService.swift */; };
 		A7FD63312280FBE500E1B460 /* MockCartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD63302280FBE500E1B460 /* MockCartService.swift */; };
+		A7FD63372281000500E1B460 /* MockResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = A7FD63202280ECF700E1B460 /* MockResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -461,6 +462,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7FD63372281000500E1B460 /* MockResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

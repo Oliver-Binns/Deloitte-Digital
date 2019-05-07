@@ -21,3 +21,10 @@ struct ProductState: StateType {
         case loaded
     }
 }
+extension ProductState {
+    func contains(productId: Int) -> Bool {
+        return MainStore.shared.state.allProducts.flatMap { $0 }.contains(where: {
+            $0.productId == productId
+        })
+    }
+}
