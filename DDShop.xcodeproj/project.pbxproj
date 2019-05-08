@@ -24,6 +24,7 @@
 		A7C927EC228381170057B012 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C927EB228381170057B012 /* CartViewController.swift */; };
 		A7C927EE2283811D0057B012 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C927ED2283811D0057B012 /* CartView.swift */; };
 		A7C927F022838A1F0057B012 /* Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C927EF22838A1F0057B012 /* Decimal.swift */; };
+		A7C927F2228390690057B012 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C927F1228390690057B012 /* WishlistViewController.swift */; };
 		A7FD6302227F82B100E1B460 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD6301227F82B100E1B460 /* ProductListView.swift */; };
 		A7FD6305228060E200E1B460 /* DDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD6304228060E200E1B460 /* DDTabBarController.swift */; };
 		A7FD630B2280961E00E1B460 /* FetchProductListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD630A2280961E00E1B460 /* FetchProductListService.swift */; };
@@ -90,6 +91,7 @@
 		A7C927EB228381170057B012 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		A7C927ED2283811D0057B012 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		A7C927EF22838A1F0057B012 /* Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decimal.swift; sourceTree = "<group>"; };
+		A7C927F1228390690057B012 /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
 		A7FD6301227F82B100E1B460 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		A7FD6304228060E200E1B460 /* DDTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDTabBarController.swift; sourceTree = "<group>"; };
 		A7FD630A2280961E00E1B460 /* FetchProductListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProductListService.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 		A7FD63262280F56400E1B460 /* WishlistView */ = {
 			isa = PBXGroup;
 			children = (
+				A7C927F1228390690057B012 /* WishlistViewController.swift */,
 			);
 			path = WishlistView;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 				A7FD6305228060E200E1B460 /* DDTabBarController.swift in Sources */,
 				A7C8FAB9227F7CB300DF9CA8 /* ProductListViewController.swift in Sources */,
 				A7FD63102280C7E500E1B460 /* ProductActions.swift in Sources */,
+				A7C927F2228390690057B012 /* WishlistViewController.swift in Sources */,
 				A7FD63242280EE8B00E1B460 /* CartModel.swift in Sources */,
 				A7FD63182280CA3400E1B460 /* MainStore.swift in Sources */,
 				A7FD63142280C87A00E1B460 /* ProductReducer.swift in Sources */,

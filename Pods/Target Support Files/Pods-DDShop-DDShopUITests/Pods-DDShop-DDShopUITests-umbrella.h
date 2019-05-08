@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_DDShopUITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_DDShopUITestsVersionString[];
+FOUNDATION_EXPORT double Pods_DDShop_DDShopUITestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_DDShop_DDShopUITestsVersionString[];
 

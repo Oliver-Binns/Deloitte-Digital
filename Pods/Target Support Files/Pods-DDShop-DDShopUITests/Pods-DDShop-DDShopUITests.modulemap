@@ -1,0 +1,6 @@
+framework module Pods_DDShop_DDShopUITests {
+  umbrella header "Pods-DDShop-DDShopUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
