@@ -26,6 +26,7 @@ final class FetchProductListService: FetchProductListServiceProtocol {
     }
 
     private func getProducts() -> Promise<[Product]> {
+        print("base: ", Globals.baseUrl)
         return Alamofire.request(Globals.baseUrl + "products")
             .responseDecodable([Product].self)
     }

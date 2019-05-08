@@ -8,13 +8,15 @@
 import Nimble
 import XCTest
 
-class DDShopUITests: XCTestCase {
+// TODO - HTTP Server in MockHttpTest needs fixing for these tests to pass!
+class DDShopUITests: MockHttpTest {
     let app = XCUIApplication()
 
     var tabBarSO: TabBarScreenObject!
     var productListSO: ProductListScreenObject!
 
     override func setUp() {
+        super.setUp()
         tabBarSO = TabBarScreenObject(tabBar: app.tabBars["tab-bar"])
         productListSO = ProductListScreenObject(tableView: app.otherElements["product-list-view"])
         // UI tests must launch the application that they test.
@@ -39,7 +41,7 @@ class DDShopUITests: XCTestCase {
     }
 
     func testProductList() {
-        expect(self.productListSO.cells.count).toEventually(equal(15))
+        expect(self.productListSO.cells.count).toEventually(equal(3))
 
         // General Use Case
         expect(self.productListSO.cells[0].name).to(equal("Fine Stripe Short Sleve Shirt, Grey"))

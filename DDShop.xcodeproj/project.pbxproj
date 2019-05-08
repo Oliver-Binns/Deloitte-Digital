@@ -25,6 +25,8 @@
 		A7C927EE2283811D0057B012 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C927ED2283811D0057B012 /* CartView.swift */; };
 		A7C927F022838A1F0057B012 /* Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C927EF22838A1F0057B012 /* Decimal.swift */; };
 		A7C927F2228390690057B012 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C927F1228390690057B012 /* WishlistViewController.swift */; };
+		A7C927F4228394610057B012 /* MockHttpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C927F3228394610057B012 /* MockHttpTest.swift */; };
+		A7C927F8228398FC0057B012 /* MockResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = A7C927F7228398FC0057B012 /* MockResponse.json */; };
 		A7FD6302227F82B100E1B460 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD6301227F82B100E1B460 /* ProductListView.swift */; };
 		A7FD6305228060E200E1B460 /* DDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD6304228060E200E1B460 /* DDTabBarController.swift */; };
 		A7FD630B2280961E00E1B460 /* FetchProductListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD630A2280961E00E1B460 /* FetchProductListService.swift */; };
@@ -92,6 +94,8 @@
 		A7C927ED2283811D0057B012 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		A7C927EF22838A1F0057B012 /* Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decimal.swift; sourceTree = "<group>"; };
 		A7C927F1228390690057B012 /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
+		A7C927F3228394610057B012 /* MockHttpTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHttpTest.swift; sourceTree = "<group>"; };
+		A7C927F7228398FC0057B012 /* MockResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockResponse.json; sourceTree = "<group>"; };
 		A7FD6301227F82B100E1B460 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		A7FD6304228060E200E1B460 /* DDTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDTabBarController.swift; sourceTree = "<group>"; };
 		A7FD630A2280961E00E1B460 /* FetchProductListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProductListService.swift; sourceTree = "<group>"; };
@@ -222,11 +226,13 @@
 		A7C8FAD7227F7CB300DF9CA8 /* DDShopUITests */ = {
 			isa = PBXGroup;
 			children = (
+				A7C927F3228394610057B012 /* MockHttpTest.swift */,
 				A7B7891222823F3B00F93091 /* Screen Objects */,
 				A7FD63272280F96300E1B460 /* Shop Tab */,
 				A7FD63292280F98800E1B460 /* Wishlist Tab */,
 				A7FD63282280F97A00E1B460 /* Cart Tab */,
 				A7C8FADA227F7CB300DF9CA8 /* Info.plist */,
+				A7C927F7228398FC0057B012 /* MockResponse.json */,
 			);
 			path = DDShopUITests;
 			sourceTree = "<group>";
@@ -508,6 +514,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C927F8228398FC0057B012 /* MockResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +671,7 @@
 				"${BUILT_PRODUCTS_DIR}/ReSwiftThunk/ReSwiftThunk.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftIcons/SwiftIcons.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Embassy/Embassy.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -675,6 +683,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftThunk.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftIcons.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Embassy.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -729,6 +738,7 @@
 			files = (
 				A7C927E822834D6C0057B012 /* ProductScreenObject.swift in Sources */,
 				A7B7891122823F3500F93091 /* TabBarScreenObject.swift in Sources */,
+				A7C927F4228394610057B012 /* MockHttpTest.swift in Sources */,
 				A7C8FAD9227F7CB300DF9CA8 /* DDShopUITests.swift in Sources */,
 				A7B789142282D32000F93091 /* ProductListScreenObject.swift in Sources */,
 			);

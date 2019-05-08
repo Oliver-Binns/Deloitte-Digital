@@ -159,6 +159,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ReSwiftThunk/ReSwiftThunk.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftIcons/SwiftIcons.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Embassy/Embassy.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
@@ -167,6 +168,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ReSwiftThunk/ReSwiftThunk.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftIcons/SwiftIcons.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Embassy/Embassy.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

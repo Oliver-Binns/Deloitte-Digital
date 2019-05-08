@@ -12,7 +12,7 @@ struct Globals {
     static var baseUrl: String {
         let delegate = UIApplication.shared.delegate as? AppDelegate
         if delegate?.testMode ?? false {
-            return ""
+            return "http://localhost:8080/"
         } else {
             return "https://private-anon-a665a2107b-ddshop.apiary-mock.com/"
         }

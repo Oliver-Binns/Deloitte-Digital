@@ -27,7 +27,6 @@ target 'DDShop' do
     # Pods for testing
     pod 'Nimble'
     pod 'Embassy'
-    pod 'EnvoyAmbassador'
   end
 end
 

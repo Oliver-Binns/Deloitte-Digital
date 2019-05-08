@@ -1,0 +1,26 @@
+[
+    {
+        "productId": 8,
+        "name": "Fine Stripe Short Sleeve Shirt, Grey",
+        "category": "Men's Casualwear",
+        "price": 49.99,
+        "oldPrice": null,
+        "stock": 9
+    },
+    {
+        "productId": 9,
+        "name": "Fine Stripe Short Sleeve Shirt, Green",
+        "category": "Men's Casualwear",
+        "price": 39.99,
+        "oldPrice": 49.99,
+        "stock": 3
+    },
+    {
+        "productId": 5,
+        "name": "Flip Flops, Blue",
+        "category": "Men's Footwear",
+        "price": 19,
+        "oldPrice": null,
+        "stock": 0
+    }
+]
