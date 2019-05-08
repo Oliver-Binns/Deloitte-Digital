@@ -13,7 +13,7 @@ struct ProductListScreenObject {
     let tableView: XCUIElement
 
     var cells: [ProductScreenObject] {
-        let cellElements = tableView.otherElements.matching(identifier: "product-cell")
+        let cellElements = tableView.cells.matching(identifier: "product-cell")
         return cellElements.allElementsBoundByIndex.map { ProductScreenObject(cell: $0) }
     }
 }

@@ -6,8 +6,15 @@
 //  Copyright © 2019 Oliver Binns. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Globals {
-    static let baseUrl = "https://private-anon-a665a2107b-ddshop.apiary-mock.com/"
+    static var baseUrl: String {
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        if delegate?.testMode ?? false {
+            return ""
+        } else {
+            return "https://private-anon-a665a2107b-ddshop.apiary-mock.com/"
+        }
+    }
 }

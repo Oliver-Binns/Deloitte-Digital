@@ -19,7 +19,9 @@ class DDShopUITests: XCTestCase {
         productListSO = ProductListScreenObject(tableView: app.otherElements["product-list-view"])
         // UI tests must launch the application that they test.
         //Doing this in setup will make sure it happens for each test method.
+        app.launchArguments = ["uiTest"]
         app.launch()
+
     }
 
     func testTabBar() {
