@@ -12,6 +12,7 @@ class ProductListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.accessibilityIdentifier = "product-list-view"
         (self.tableView as? ProductListView)?.productDelegate = self
         MainStore.shared.dispatch(fetchProducts())
     }

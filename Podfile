@@ -1,8 +1,12 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '11.0'
 
 target 'DDShop' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  # ignore all warnings from all pods
+  # as these a third-party libraries, we cannot control them
+  inhibit_all_warnings!
+
+  # Pods for DDShop
   use_frameworks!
   pod 'Alamofire'
   pod 'PromiseKit'
@@ -12,17 +16,19 @@ target 'DDShop' do
   pod 'SwiftLint'
   pod 'SwiftIcons'
 
-  # Pods for DDShop
-
   target 'DDShopTests' do
     inherit! :search_paths
-    pod 'Nimble'
     # Pods for testing
+    pod 'Nimble'
   end
 
   target 'DDShopUITests' do
-    inherit! :search_paths
+    #inherit! :search_paths
     # Pods for testing
+    pod 'Nimble'
+    pod 'Embassy'
+    pod 'EnvoyAmbassador'
   end
-
 end
+
+

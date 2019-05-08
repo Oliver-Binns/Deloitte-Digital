@@ -22,6 +22,11 @@ struct ProductState: StateType {
     }
 }
 extension ProductState {
+    func get(productId: Int) -> Product? {
+        return MainStore.shared.state.allProducts.flatMap { $0 }
+            .first(where: { $0.productId == productId })
+    }
+
     func contains(productId: Int) -> Bool {
         return MainStore.shared.state.allProducts.flatMap { $0 }.contains(where: {
             $0.productId == productId

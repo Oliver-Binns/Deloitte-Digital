@@ -22,9 +22,9 @@ class ProductTableCell: UITableViewCell {
         didSet {
             guard let product = product else { return }
             name.text = product.name
-            let pricingString = NSMutableAttributedString(string: "£\(product.price) ")
+            let pricingString = NSMutableAttributedString(string: "\(product.price.gbp) ")
             if let oldPrice = product.oldPrice {
-                pricingString.append(NSAttributedString(string: "£\(oldPrice)", attributes: [
+                pricingString.append(NSAttributedString(string: "\(oldPrice.gbp)", attributes: [
                     NSAttributedString.Key.foregroundColor: UIColor.red,
                     NSAttributedString.Key.strikethroughColor: UIColor.red,
                     NSAttributedString.Key.strikethroughStyle: NSNumber(value: NSUnderlineStyle.single.rawValue)
@@ -32,15 +32,14 @@ class ProductTableCell: UITableViewCell {
             }
             pricing.attributedText = pricingString
 
+            // Only disable cart button-
+            // We should be able to add a product that is out of stock to Wishlist
             cart.isEnabled = product.stock != 0
-            wishList.isEnabled = product.stock != 0
             if product.stock != 0 {
                 cart.alpha = 1
-                wishList.alpha = 1
                 stockLabel.text = "\(product.stock) in stock"
             } else {
                 cart.alpha = 0.3
-                wishList.alpha = 0.3
             }
         }
     }

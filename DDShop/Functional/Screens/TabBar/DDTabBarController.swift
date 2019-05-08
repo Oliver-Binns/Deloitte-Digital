@@ -12,7 +12,7 @@ import UIKit
 class DDTabBarController: UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        tabBar.accessibilityIdentifier = "tab-bar"
         let icons: [FASolidType] = [ .tshirt, .shoppingCart, .star, .infoCircle ]
         for (index, icon) in icons.enumerated() {
             tabBar.items?[index].setIcon(icon: .fontAwesomeSolid(icon), size: nil,
@@ -26,7 +26,9 @@ extension DDTabBarController: StoreSubscriber {
     typealias StoreSubscriberStateType = ProductState
 
     func newState(state: ProductState) {
+        tabBar.items?[1].accessibilityIdentifier = "cart"
         tabBar.items?[1].badgeValue = state.cart.isEmpty ? nil : "\(state.cart.count)"
+        tabBar.items?[2].accessibilityIdentifier = "wishlist"
         tabBar.items?[2].badgeValue = state.wishlist.isEmpty ? nil : "\(state.wishlist.count)"
     }
 }

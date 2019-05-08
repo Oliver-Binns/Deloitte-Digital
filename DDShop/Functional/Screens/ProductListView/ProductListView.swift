@@ -52,6 +52,7 @@ extension ProductListView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //swiftlint:disable:next force_cast
         let cell = tableView.dequeueReusableCell(withIdentifier: CellTypes.clothingCell.rawValue, for: indexPath) as! ProductTableCell
+        cell.accessibilityIdentifier = "product-cell"
         cell.wishlistDelegate = productDelegate
         cell.cartDelegate = productDelegate
         cell.product = products[indexPath.section][indexPath.row]
